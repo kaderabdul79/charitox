@@ -1,0 +1,15 @@
+.title-area{
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.title h4{
+    color: #00BAA3;
+}
+.title h2{
+    font-size: 64px;
+}
+.title span{
+    color: #D55342;
+}
