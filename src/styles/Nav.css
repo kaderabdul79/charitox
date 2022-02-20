@@ -1,0 +1,51 @@
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.nav-area{
+    background-color: rgb(185, 212, 203);
+    border-bottom: 2px solid #EFC94C;
+}
+nav{
+    display: grid;
+    margin: 0 50px;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+    "l l t t t t t t"
+    "l l b b b b b b";
+}
+.logo{
+    grid-area: l;
+    font-weight: bold;
+    padding-top: 25px;
+    text-transform: uppercase;
+}
+.topnav{
+    grid-area: t;
+    padding: 10px;
+    padding-right: 0;
+}
+
+.topnav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.bttmnav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.bttmnav ul li{
+    padding: 12px;
+}
+.bttmnav{
+    grid-area: b;
+}
+.topnav li a,
+.bttmnav ul li a{
+    border-radius: 0;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}

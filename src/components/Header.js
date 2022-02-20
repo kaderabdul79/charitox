@@ -1,10 +1,12 @@
 import React from 'react';
 import '../styles/Header.css';
 import backgroundImg from '../images/background.jpg';
+import Nav from './Nav';
 
 const Header = () => {
     return (
         <div className="header-area">
+            <Nav></Nav>
             <div className="header">
                 <img src={backgroundImg} alt="" />
                 <div className="header-desc container">

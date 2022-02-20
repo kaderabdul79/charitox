@@ -12,7 +12,7 @@
     width: 500px;
     position: absolute;
     top: 0;
-    transform: translateY(50%);
+    transform: translateY(80%);
     right: 0;
     left: 0;
     display: flex;
@@ -20,6 +20,7 @@
     align-items: start;
     text-transform: capitalize;
     color: white;
+    margin: 0 50px;
 }
 .header-desc h3{
     font-size: 18px;
