@@ -1,0 +1,30 @@
+.trending-cause{
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+}
+.cause img{
+    width: 100%;
+}
+.author{
+    margin-top: 12px;
+}
+.author span{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-right: 60px;
+}
+.author span:first-child{
+    background-color: aqua;
+    padding: 8px;
+}
+.causetitle{
+    margin: 10px;
+}
+.goal span{
+    margin-right: 80px;
+}
+.goal span b{
+    margin: 5px 5px 0px 0px;
+}
