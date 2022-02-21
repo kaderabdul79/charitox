@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Nav.css';
 
 const Nav = () => {
@@ -8,19 +9,19 @@ const Nav = () => {
                 <div className="logo"><h2>charitox</h2></div>
                 <div className="topnav">
                     <ul>
-                        <li><a href="">987-098-098-09</a></li>
-                        <li><a href="">info@webmail.com</a></li>
-                        <li><a href="" className='btn-yellow'>Donate Us</a></li>
+                        <li><Link to="">987-098-098-09</Link></li>
+                        <li><Link to="">info@webmail.com</Link></li>
+                        <li><Link to="/donate" className='btn-yellow'>Donate Us</Link></li>
                     </ul>
                 </div>
                 <div className="bttmnav">
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Causes</a></li>
-                        <li><a href="">Pages</a></li>
-                        <li><a href="">News</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/events">events</Link></li>
+                        <li><Link to="/pages">Pages</Link></li>
+                        <li><Link to="/news">News</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>
             </nav>
