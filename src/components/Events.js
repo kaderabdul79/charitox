@@ -1,10 +1,12 @@
 import React from 'react';
 import '../styles/Events.css';
 import event1 from '../images/a6.jpg';
+import Title from '../elements/Title';
 
 const Events = () => {
     return (
         <div className='events-area'>
+            <Title toptitle="Ongoing Events" bigtitle="Join Us"></Title>
             <div className="events">
                 <div className="eventImg">
                     <img src={event1} alt="" />

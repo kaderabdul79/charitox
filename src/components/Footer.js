@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className='footer-area'>
             <div className="footer">
-            © FundBux Charity Trust - {(new Date().getFullYear())}. All rights reserved.    
+            © Charitox Charity Trust - {(new Date().getFullYear())}. All rights reserved.    
             </div>
         </div>
     );

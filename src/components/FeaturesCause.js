@@ -6,7 +6,7 @@ import cause1 from '../images/a8.jpg';
 const FeaturesCause = () => {
     return (
         <div>
-            <Title toptitle="Trending Cause" bigtitle="It’s About Impact,"> History</Title>
+            <Title toptitle="Trending Cause" bigtitle="It’s About Impact," highlights="good"> History</Title>
             <div className="trending-cause">
                 <div className="cause">
                     <img src={cause1} alt="" />
