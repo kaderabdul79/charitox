@@ -5,7 +5,7 @@ import cause1 from '../images/a8.jpg';
 
 const FeaturesCause = () => {
     return (
-        <div>
+        <div className='formargin'>
             <Title toptitle="Trending Cause" bigtitle="It’s About Impact," highlights="good"> History</Title>
             <div className="trending-cause">
             <div className="cause">

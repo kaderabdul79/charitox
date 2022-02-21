@@ -1,9 +1,11 @@
 .header-area{
     height: 100vh;
-    position: relative;
+    
+    
 }
 .header{
-    
+    position: relative;
+    /* margin-bottom: 50px; */
 }
 .header img{
     width: 100%;
