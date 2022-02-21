@@ -1,5 +1,5 @@
 .trending-cause{
-    margin: 0 50px;
+    margin: 0 100px;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     gap: 30px;

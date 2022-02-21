@@ -1,0 +1,33 @@
+.newsfeeds{
+    margin: 20px 100px;
+}
+.news{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+}
+
+.big-features img{
+    width: 100%;
+}
+.authortag{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shortnews{
+    
+}
+.newsdate{
+    background-color: #EFC94C;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    font-size: 44px;
+}
+
+
+
+
+
+
