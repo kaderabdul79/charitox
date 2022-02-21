@@ -9,6 +9,7 @@
 }
 .author{
     margin-top: 12px;
+    padding: 20px 0;
 }
 .author span{
     margin-top: 15px;
@@ -21,6 +22,9 @@
 }
 .causetitle{
     margin: 10px;
+}
+.goal{
+    padding: 5px 0;
 }
 .goal span{
     margin-right: 80px;

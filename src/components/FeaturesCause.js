@@ -8,13 +8,13 @@ const FeaturesCause = () => {
         <div>
             <Title toptitle="Trending Cause" bigtitle="It’s About Impact," highlights="good"> History</Title>
             <div className="trending-cause">
-                <div className="cause">
+            <div className="cause">
                     <img src={cause1} alt="" />
                     <div className="author">
                         <span>Health</span>
                         <span>By Abdul K.</span>
                     </div>
-                    <h2 class="causetitle">People Health Response And Village Mans</h2>
+                    <h3>People Health Response And Village Mans</h3>
                     <div className="goal">
                         <span><b>15%</b>Raised</span>
                         <span><b>7000</b>Goal</span>
