@@ -2,25 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Login.css';
 
-const Login = () => {
+const Signin = () => {
     return (
         <div className='formlogin'>
             <div className="loginform">
-                <div className="login">Login Form</div>
+                <div className="login">Signup</div>
                 <form class="form">
                     <div className='email'><input type="email" name="email" value="" placeholder='enter email'></input></div>
                     <div className='password'><input type="password" name="password" value="" placeholder='enter password'></input></div>
+                    <div className='password'><input type="password" name="repassword" value="" placeholder='Retype password'></input></div>
+                    <div className='name'><input type="text" name="name" value="" placeholder='Enter name'></input></div>
                     <Link to="/forgot">Forgot Password</Link>
-                    <div className="submit"><input type="submit" value="Login" /></div>
+                    <div className="submit"><input type="submit" value="Signin" /></div>
                 </form>
-                Have no Account ? <Link to="/signup">Signup Now</Link>
-                <div className="provider">
-                    <button className='google'><Link to="/login">Connect with Google</Link></button>
-                    <button className='github'><Link to="/login">Connect with Github</Link></button>
-                </div>
+                Already Have an Account? <Link to="/login">Login</Link>
             </div>
         </div>
     );
 };
 
-export default Login;
+export default Signin;

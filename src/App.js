@@ -8,6 +8,7 @@ import NewsFeeds from './components/NewsFeeds';
 import AllEvents from './Pages/AllEvents';
 import Homepage from './Pages/Homepage';
 import Login from './Pages/Login';
+import Signin from './Pages/Signin';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/home"><Homepage></Homepage></Route>          
           <Route path="/events"><AllEvents></AllEvents></Route>
           <Route path="/login"><Login></Login></Route>
+          <Route path="/signup"><Signin></Signin></Route>
 
         </Switch>
       </BrowserRouter>
