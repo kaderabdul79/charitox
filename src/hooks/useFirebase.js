@@ -14,29 +14,39 @@ const useFirebase = () => {
     const githubprovider = new GithubAuthProvider();
 
     //Authenticate Using Google Sign-In
-    const usingGoogleSignin = () => {
+    const usingGoogleSignin = (location,history) => {
+        setIsLoading(true)
         signInWithPopup(auth, googleprovider)
         .then((result) => {
             const user = result.user;
+            setUser(user)
+            const destination = location.state?.from || ''
+            history.replace(destination)
             // console.log(user)
         }).catch((error) => {
-            const email = error.email;
-            console.log(email)
+            setError(error)
+        })
+        .finally(() => {
+            setIsLoading(false)
         });
 
     }
 
     //Authenticate Using Github Sign-In
-    const usingGithubSignin = () => {
+    const usingGithubSignin = (location,history) => {
+        setIsLoading(true)
         signInWithPopup(auth, githubprovider)
         .then((result) => {
             const user = result.user;
             setUser(user)
-            console.log(user)
+            // console.log(user)
+            const destination = location.state?.from || ''
+            history.replace(destination)
         }).catch((error) => {
-            const email = error.email;
-            setUser(error.message)
-            console.log(email)
+            setUser(error)
+            // console.log(email)
+        }).finally(() => {
+            setIsLoading(false)
         });
 
     }
@@ -62,10 +72,12 @@ const useFirebase = () => {
     }
 
     // Sign in a user with an email address and password
-    const userLogin = (email, password) => {
+    const userLogin = (email, password,location,history) => {
         setIsLoading(true)
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
+            const destination = location.state?.from || ''
+            history.replace(destination)
           // Signed in 
           const user = userCredential.user;
           setUser(user)

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import '../styles/Login.css';
@@ -7,13 +9,17 @@ import '../styles/Login.css';
 const Login = () => {
     const [loginInfo,setLoginInfo] = useState({})
     const {usingGoogleSignin, usingGithubSignin, user, error,userLogin} = useAuth()
+    
+    const location = useLocation();
+    const history = useHistory();
 
     //console.log(usingGoogleSignin)
     const GoogleSignin = () => {
-        usingGoogleSignin()
+        // console.log(location)
+        usingGoogleSignin(location,history)
     }
     const GithubSignin = () => {
-        usingGithubSignin()
+        usingGithubSignin(location,history)
     }
 
     const handleOnChange = e => {
@@ -24,10 +30,11 @@ const Login = () => {
         // console.log(field,value,loginInfo);
         setLoginInfo(newloginInfo);
     }
-    
+
+
     const handleSigninForm = (e) => {
         // console.log(loginInfo);
-        userLogin(loginInfo.email,loginInfo.password)
+        userLogin(loginInfo.email,loginInfo.password,location,history)
         
         e.preventDefault();
     }

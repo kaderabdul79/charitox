@@ -40,7 +40,7 @@ const Signup = () => {
                     <div className="submit"><input type="submit" value="Signup" /></div>
                 </form>
                 }
-                { isLoading && <div><iframe src="https://giphy.com/embed/xTk9ZvMnbIiIew7IpW" width="380" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/loop-loading-loader-xTk9ZvMnbIiIew7IpW">via GIPHY</a></p></div>}
+                { isLoading && <div><iframe src="https://giphy.com/embed/xTk9ZvMnbIiIew7IpW" width="380" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/loop-loading-loader-xTk9ZvMnbIiIew7IpW">Loading...</a></p></div>}
                 { user?.email && <div>User Created Successfully</div> }
                 { error ? <div>{error}</div> : <div></div> }
                 Already Have an Account? <Link to="/login">Login</Link>
