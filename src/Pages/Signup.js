@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 import '../styles/Login.css';
 
 const Signup = () => {
+    const [signupInfo,setSignUpInfo] = useState({})
+    const {usingGoogleSignin, usingGithubSignin, user, error} = useAuth()
+
+    const handleOnChange = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newsignupInfo = { ...signupInfo };
+        newsignupInfo[field] = value;
+        // console.log(field,value,signupInfo);
+        setSignUpInfo(newsignupInfo);
+    }
+    
+    const handleSignupForm = (e) => {
+        console.log(signupInfo);
+        
+        e.preventDefault();
+    }
+
     return (
         <div className='formlogin'>
             <div className="loginform">
                 <div className="login">Signup</div>
-                <form class="form">
-                    <div className='email'><input type="email" name="email" value="" placeholder='enter email'></input></div>
-                    <div className='password'><input type="password" name="password" value="" placeholder='enter password'></input></div>
-                    <div className='password'><input type="password" name="repassword" value="" placeholder='Retype password'></input></div>
-                    <div className='name'><input type="text" name="name" value="" placeholder='Enter name'></input></div>
+                <form className="form" onSubmit={handleSignupForm}>
+                    <div className='email'><input type="email" onChange={handleOnChange} name="email" placeholder='enter email'></input></div>
+                    <div className='password'><input type="password" onChange={handleOnChange} name="password" placeholder='enter password'></input></div>
+                    <div className='password'><input type="password" onChange={handleOnChange} name="repassword" placeholder='Retype password'></input></div>
+                    <div className='name'><input type="text" onChange={handleOnChange} name="name" placeholder='Enter name'></input></div>
                     <Link to="/forgot">Forgot Password</Link>
                     <div className="submit"><input type="submit" value="Signup" /></div>
                 </form>

@@ -7,7 +7,7 @@ import '../styles/Login.css';
 const Login = () => {
     const [loginInfo,setLoginInfo] = useState({})
     const {usingGoogleSignin, usingGithubSignin, user, error} = useAuth()
-    
+
     //console.log(usingGoogleSignin)
     const GoogleSignin = () => {
         usingGoogleSignin()
@@ -25,7 +25,7 @@ const Login = () => {
         setLoginInfo(newloginInfo);
     }
     
-    const handleSignin = (e) => {
+    const handleSigninForm = (e) => {
         console.log(loginInfo);
         
         e.preventDefault();
@@ -34,11 +34,11 @@ const Login = () => {
         <div className='formlogin'>
             <div className="loginform">
                 <div className="login">Login Form</div>
-                <form className="form">
+                <form className="form" onSubmit={handleSigninForm}>
                     <div className='email'><input onChange={handleOnChange} type="email" name="email" placeholder='enter email'></input></div>
                     <div className='password'><input onChange={handleOnChange} type="password" name="password" placeholder='enter password'></input></div>
                     <Link to="/forgot">Forgot Password</Link>
-                    <div className="submit"><input onClick={handleSignin} type="submit" name="Login" /></div>
+                    <div className="submit"><input onClick={handleSigninForm} type="submit" name="Login" /></div>
                 </form>
                     Have no Account ? <Link to="/signup">Signup Now</Link>
                 <div className="provider">
