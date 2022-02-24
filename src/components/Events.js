@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Events.css';
 import event1 from '../images/a6.jpg';
 import Title from '../elements/Title';
+import { Link } from 'react-router-dom';
 
 const Events = () => {
     return (
@@ -24,7 +25,7 @@ const Events = () => {
                     <li>The world we live</li>
                 </div>
                 <div className="eventBtn">
-                    <a href="">Book A Seat</a>
+                    <Link to="/event">Book A Seat</Link>
                 </div>
             </div>            <div className="events">
                 <div className="eventImg">
@@ -43,7 +44,7 @@ const Events = () => {
                     <li>The world we live</li>
                 </div>
                 <div className="eventBtn">
-                    <a href="">Book A Seat</a>
+                    <Link to="/event">Book A Seat</Link>
                 </div>
             </div>
         </div>
