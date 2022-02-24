@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 import '../styles/Nav.css';
 
 const Nav = () => {
+    const {user,logOut} = useAuth()
     return (
         <div className='nav-area'>
             <nav>
@@ -22,7 +24,10 @@ const Nav = () => {
                         <li><Link to="/pages">Pages</Link></li>
                         <li><Link to="/news">News</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
-                        <li><Link to="/login">Login</Link></li>
+                        {
+                            user.email ? <li><Link onClick={logOut}>Logout</Link></li>
+                            : <li><Link to="/login">Login</Link></li>
+                        }
                     </ul>
                 </div>
             </nav>
