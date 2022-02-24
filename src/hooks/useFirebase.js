@@ -52,7 +52,7 @@ const useFirebase = () => {
     }
 
     //Create a password-based account register 
-    const userRegistration = (email, password) => {
+    const userRegistration = (email, password, history) => {
         setIsLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
@@ -60,6 +60,7 @@ const useFirebase = () => {
           const user = userCredential.user;
           setUser(user)
           setError('')
+          history.replace('/')
         })
         .catch((error) => {
         //   const errorMessage = error.message;

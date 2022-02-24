@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import '../styles/Login.css';
@@ -6,6 +7,8 @@ import '../styles/Login.css';
 const Signup = () => {
     const [signupInfo,setSignUpInfo] = useState({})
     const {user, error, userRegistration, isLoading} = useAuth()
+
+    const history = useHistory()
 
     const handleOnChange = e => {
         const field = e.target.name;
@@ -22,7 +25,7 @@ const Signup = () => {
             alert("password doesn't match")
             return
         }
-        userRegistration(signupInfo.email,signupInfo.password)
+        userRegistration(signupInfo.email,signupInfo.password,history)
         e.preventDefault();
     }
 
