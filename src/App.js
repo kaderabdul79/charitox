@@ -1,14 +1,11 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-// import Events from './components/Events';
-import FeaturesCause from './components/FeaturesCause';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import NewsFeeds from './components/NewsFeeds';
 import AllEvents from './Pages/AllEvents';
+import Booking from './Pages/Booking';
+import Event from './Pages/Event';
 import Homepage from './Pages/Homepage';
 import Login from './Pages/Login';
-import Signin from './Pages/Signin';
+import Signup from './Pages/Signup';
 
 function App() {
   return (
@@ -19,9 +16,10 @@ function App() {
           <Route exact path="/"><Homepage></Homepage></Route>          
           <Route path="/home"><Homepage></Homepage></Route>          
           <Route path="/events"><AllEvents></AllEvents></Route>
+          <Route path="/booking"><Booking></Booking></Route>
+          <Route path="/event"><Event></Event></Route>
           <Route path="/login"><Login></Login></Route>
-          <Route path="/signup"><Signin></Signin></Route>
-
+          <Route path="/signup"><Signup></Signup></Route>
         </Switch>
       </BrowserRouter>
       {/* <Footer></Footer> */}

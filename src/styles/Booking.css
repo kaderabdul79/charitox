@@ -1,0 +1,17 @@
+.event-banner{
+    position: relative;
+ }
+ .event-title{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     color: #ffffff;
+    
+ }
+ .event-title p{
+     font-size: 30px;
+ }
+ .event-title h2{
+     font-size: 50px;
+ }

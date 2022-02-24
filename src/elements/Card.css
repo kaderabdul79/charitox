@@ -1,0 +1,20 @@
+.card-area{
+    width: 400px;
+    padding: 40px 50px;
+    border-top: 5px solid #DEBA46;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+
+}
+.card-area h2{
+    text-align: center;
+    margin-bottom: 8px;
+}
+.card{
+    display: flex;
+
+}
+.details p{
+    margin: 8px 0;
+}

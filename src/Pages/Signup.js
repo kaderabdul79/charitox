@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Login.css';
 
-const Signin = () => {
+const Signup = () => {
     return (
         <div className='formlogin'>
             <div className="loginform">
@@ -13,7 +13,7 @@ const Signin = () => {
                     <div className='password'><input type="password" name="repassword" value="" placeholder='Retype password'></input></div>
                     <div className='name'><input type="text" name="name" value="" placeholder='Enter name'></input></div>
                     <Link to="/forgot">Forgot Password</Link>
-                    <div className="submit"><input type="submit" value="Signin" /></div>
+                    <div className="submit"><input type="submit" value="Signup" /></div>
                 </form>
                 Already Have an Account? <Link to="/login">Login</Link>
             </div>
@@ -21,4 +21,4 @@ const Signin = () => {
     );
 };
 
-export default Signin;
+export default Signup;

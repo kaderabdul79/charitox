@@ -1,0 +1,35 @@
+
+
+.event-banner{
+   position: relative;
+}
+.event-banner img{
+    max-width: 100%;
+}
+.event-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+   
+}
+.event-title p{
+    font-size: 30px;
+}
+.event-title h2{
+    font-size: 50px;
+}
+ .booking{
+     margin: 10px 100px;
+     display: flex;
+ }
+ .booking-form{
+     flex-basis: 60%;
+     margin-right: 20px;
+ }
+ .booking-details{
+     position: absolute;
+     top: 45%;
+     right: 10%;
+ }
