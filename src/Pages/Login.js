@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import useFirebase from '../hooks/useFirebase';
+import useAuth from '../hooks/useAuth';
 import '../styles/Login.css';
 
 const Login = () => {
     const [loginInfo,setLoginInfo] = useState({})
-    const {usingGoogleSignin, usingGithubSignin, user, error} = useFirebase()
+    const {usingGoogleSignin, usingGithubSignin, user, error} = useAuth()
+    
     //console.log(usingGoogleSignin)
     const GoogleSignin = () => {
         usingGoogleSignin()

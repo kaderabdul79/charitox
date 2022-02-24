@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+import AuthProvider from './context/AuthProvider';
 import AllEvents from './Pages/AllEvents';
 import Booking from './Pages/Booking';
 import Event from './Pages/Event';
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       {/* <Header></Header> */}
+    <AuthProvider>
       <BrowserRouter>
         <Switch>
           <Route exact path="/"><Homepage></Homepage></Route>          
@@ -22,6 +24,7 @@ function App() {
           <Route path="/signup"><Signup></Signup></Route>
         </Switch>
       </BrowserRouter>
+    </AuthProvider>    
       {/* <Footer></Footer> */}
     </div>
   );
