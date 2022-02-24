@@ -52,14 +52,16 @@ const useFirebase = () => {
     }
 
     //Create a password-based account register 
-    const userRegistration = (email, password, history) => {
+    const userRegistration = (email, password, name, history) => {
         setIsLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-          // Signed in 
-          const user = userCredential.user;
-          setUser(user)
           setError('')
+        //   to show the name,email after user registered
+          const newUser = {email,displayName:name}
+          setUser(newUser)
+          
+        //   after registered url replace to home
           history.replace('/')
         })
         .catch((error) => {

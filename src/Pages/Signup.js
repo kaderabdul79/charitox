@@ -25,7 +25,7 @@ const Signup = () => {
             alert("password doesn't match")
             return
         }
-        userRegistration(signupInfo.email,signupInfo.password,history)
+        userRegistration(signupInfo.email,signupInfo.password,signupInfo.name,history)
         e.preventDefault();
     }
 
