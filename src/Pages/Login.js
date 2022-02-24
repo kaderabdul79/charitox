@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import useFirebase from '../hooks/useFirebase';
 import '../styles/Login.css';
 
 const Login = () => {
-    const {usingGoogleSignin, usingGithubSignin} = useFirebase()
+    const [loginInfo,setLoginInfo] = useState({})
+    const {usingGoogleSignin, usingGithubSignin, user, error} = useFirebase()
     //console.log(usingGoogleSignin)
     const GoogleSignin = () => {
         usingGoogleSignin()
@@ -12,7 +14,19 @@ const Login = () => {
     const GithubSignin = () => {
         usingGithubSignin()
     }
+
+    const handleOnChange = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newloginInfo = { ...loginInfo };
+        newloginInfo[field] = value;
+        // console.log(field,value,loginInfo);
+        setLoginInfo(newloginInfo);
+    }
+    
     const handleSignin = (e) => {
+        console.log(loginInfo);
+        
         e.preventDefault();
     }
     return (
@@ -20,8 +34,8 @@ const Login = () => {
             <div className="loginform">
                 <div className="login">Login Form</div>
                 <form className="form">
-                    <div className='email'><input type="email" name="email" placeholder='enter email'></input></div>
-                    <div className='password'><input type="password" name="password" placeholder='enter password'></input></div>
+                    <div className='email'><input onChange={handleOnChange} type="email" name="email" placeholder='enter email'></input></div>
+                    <div className='password'><input onChange={handleOnChange} type="password" name="password" placeholder='enter password'></input></div>
                     <Link to="/forgot">Forgot Password</Link>
                     <div className="submit"><input onClick={handleSignin} type="submit" name="Login" /></div>
                 </form>
