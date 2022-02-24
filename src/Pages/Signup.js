@@ -5,7 +5,7 @@ import '../styles/Login.css';
 
 const Signup = () => {
     const [signupInfo,setSignUpInfo] = useState({})
-    const {usingGoogleSignin, usingGithubSignin, user, error, userRegistration,isLoading} = useAuth()
+    const {user, error, userRegistration, isLoading} = useAuth()
 
     const handleOnChange = e => {
         const field = e.target.name;
@@ -18,6 +18,10 @@ const Signup = () => {
     
     const handleSignupForm = (e) => {
         // console.log(signupInfo);
+        if(signupInfo.password !== signupInfo.repassword){
+            alert("password doesn't match")
+            return
+        }
         userRegistration(signupInfo.email,signupInfo.password)
         e.preventDefault();
     }
@@ -37,6 +41,8 @@ const Signup = () => {
                 </form>
                 }
                 { isLoading && <div><iframe src="https://giphy.com/embed/xTk9ZvMnbIiIew7IpW" width="380" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/loop-loading-loader-xTk9ZvMnbIiIew7IpW">via GIPHY</a></p></div>}
+                { user?.email && <div>User Created Successfully</div> }
+                { error ? <div>{error}</div> : <div></div> }
                 Already Have an Account? <Link to="/login">Login</Link>
                 {/* {user && <h3>{user?.displayName}</h3>} */}
             </div>
