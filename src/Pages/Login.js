@@ -6,7 +6,7 @@ import '../styles/Login.css';
 
 const Login = () => {
     const [loginInfo,setLoginInfo] = useState({})
-    const {usingGoogleSignin, usingGithubSignin, user, error} = useAuth()
+    const {usingGoogleSignin, usingGithubSignin, user, error,userLogin} = useAuth()
 
     //console.log(usingGoogleSignin)
     const GoogleSignin = () => {
@@ -26,7 +26,8 @@ const Login = () => {
     }
     
     const handleSigninForm = (e) => {
-        console.log(loginInfo);
+        // console.log(loginInfo);
+        userLogin(loginInfo.email,loginInfo.password)
         
         e.preventDefault();
     }

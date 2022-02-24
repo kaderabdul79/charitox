@@ -5,7 +5,7 @@ import '../styles/Login.css';
 
 const Signup = () => {
     const [signupInfo,setSignUpInfo] = useState({})
-    const {usingGoogleSignin, usingGithubSignin, user, error} = useAuth()
+    const {usingGoogleSignin, usingGithubSignin, user, error, userRegistration} = useAuth()
 
     const handleOnChange = e => {
         const field = e.target.name;
@@ -17,8 +17,8 @@ const Signup = () => {
     }
     
     const handleSignupForm = (e) => {
-        console.log(signupInfo);
-        
+        // console.log(signupInfo);
+        userRegistration(signupInfo.email,signupInfo.password)
         e.preventDefault();
     }
 
@@ -35,6 +35,7 @@ const Signup = () => {
                     <div className="submit"><input type="submit" value="Signup" /></div>
                 </form>
                 Already Have an Account? <Link to="/login">Login</Link>
+                {/* {user && <h3>{user?.displayName}</h3>} */}
             </div>
         </div>
     );
