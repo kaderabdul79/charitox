@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
 import initializeFirebase from '../Firebase/firebase.init';
 
 initializeFirebase();
@@ -40,7 +40,7 @@ const useFirebase = () => {
 
     }
 
-    // Get the currently signed-in user
+    // observer check state change or not
     useEffect(()=>{
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -53,8 +53,17 @@ const useFirebase = () => {
           return () => unsubscribed;
     },[])
 
+    // sign out user,
+    const logOut = () => {
+        signOut(auth).then(() => {
+            setUser({})
+          }).catch((error) => {
+            setError(error.message)
+        });
+    }
+
     return {
-        usingGoogleSignin,usingGithubSignin
+        usingGoogleSignin,usingGithubSignin,user,error,logOut
     };
 };
 
