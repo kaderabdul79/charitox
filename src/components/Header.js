@@ -14,8 +14,8 @@ const Header = () => {
                     <h3>our mission: food,education,medicing</h3>
                     <h2>we're on a mission to change that</h2>
                     <div className="btn">
-                        <div className="btn-yellow"><Link to="">view events</Link></div>
-                        <div className="btn-white"><Link to="">Donate now</Link></div>
+                        <div className="btn-yellow"><Link to="/events">view events</Link></div>
+                        <div className="btn-white"><Link to="/donate">Donate now</Link></div>
                     </div>
                 </div>
             </div>

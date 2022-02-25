@@ -13,7 +13,7 @@ const Nav = () => {
                     <ul>
                         <li><Link to="">987-098-098-09</Link></li>
                         <li><Link to="">info@webmail.com</Link></li>
-                        <li><Link to="/donate" className='btn-yellow'>Donate Us</Link></li>
+                        <li><Link to="/donate" className='btn-donate'>Donate Us</Link></li>
                     </ul>
                 </div>
                 <div className="bttmnav">
@@ -21,7 +21,6 @@ const Nav = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/about">About</Link></li>
                         <li><Link to="/events">events</Link></li>
-                        <li><Link to="/pages">Pages</Link></li>
                         <li><Link to="/news">News</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
                         {

@@ -1,7 +1,5 @@
 .header-area{
     height: 100vh;
-    
-    
 }
 .header{
     position: relative;
@@ -14,7 +12,7 @@
     width: 500px;
     position: absolute;
     top: 0;
-    transform: translateY(80%);
+    transform: translateY(50%);
     right: 0;
     left: 0;
     display: flex;
@@ -64,10 +62,6 @@
 .btn-white:hover{
     background-color: #EFC94C;
 }
-/* .container{
-    width: 1200px;
-} */
-
 
 
 
