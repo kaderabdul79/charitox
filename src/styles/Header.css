@@ -21,6 +21,7 @@
     text-transform: capitalize;
     color: white;
     margin: 0 100px;
+    user-select: none;
 }
 .header-desc h3{
     font-size: 18px;

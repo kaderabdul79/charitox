@@ -12,15 +12,31 @@
 .logo{
     font-weight: bold;
     text-transform: uppercase;
+    user-select: none;
 }
-.list-item ul{
+.nav-list-item ul{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+}
+.nav-list-item ul li{
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    padding: 10px 0;
+    margin-left: 16px;
 }
-.list-item ul li{
-    margin: 0;
-    padding: 0;
+.nav-list-item ul li a{
+    text-decoration: none;
+    color: white;
 }
-
+.btn-donate{
+    display: inline-block;
+    background-color: #EFC94C;
+    padding: 15px 35px;
+    border-radius: 25px;
+    transition: .3s;
+}
+.btn-donate:hover{
+    background-color: #000000;
+}
