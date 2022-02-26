@@ -1,60 +1,26 @@
-ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
 .nav-area{
     background-color: rgb(185, 212, 203);
     border-bottom: 2px solid #EFC94C;
+
 }
-nav{
-    display: grid;
-    margin: 0 50px;
-    grid-template-columns: repeat(8,1fr);
-    grid-template-rows: repeat(2,1fr);
-    grid-template-areas: 
-    "l l t t t t t t"
-    "l l b b b b b b";
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px;
 }
 .logo{
-    grid-area: l;
     font-weight: bold;
-    padding-top: 25px;
     text-transform: uppercase;
 }
-.topnav{
-    grid-area: t;
-    padding: 10px;
-    padding-top: 22px;
+.list-item ul{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+.list-item ul li{
+    margin: 0;
+    padding: 0;
 }
 
-.topnav ul{
-    display: flex;
-    justify-content: flex-end;
-}
-.bttmnav ul{
-    display: flex;
-    justify-content: flex-end;
-}
-.bttmnav ul li{
-    padding: 12px;
-}
-.bttmnav{
-    grid-area: b;
-}
-.topnav li a,
-.bttmnav ul li a{
-    border-radius: 0;
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-}
-.topnav li .btn-donate{
-    background-color: #EFC94C;
-    padding: 15px 35px;
-    border-radius: 25px;
-    transition: .3s;
-}
-.topnav li .btn-donate:hover{
-    background-color: #000000;
-}
