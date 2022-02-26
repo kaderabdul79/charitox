@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './context/AuthProvider';
 import AllEvents from './Pages/AllEvents';
-import Booking from './Pages/Booking';
+import Donate from './Pages/Donate';
 import Event from './Pages/Event';
 import Homepage from './Pages/Homepage';
 import Login from './Pages/Login';
@@ -23,6 +23,7 @@ function App() {
           <Route path="/news"><News></News></Route>
           <Route path="/login"><Login></Login></Route>
           <Route path="/signup"><Signup></Signup></Route>
+          <Route path="/donate"><Donate></Donate></Route>
         </Switch>
       </BrowserRouter>
     </AuthProvider>    
