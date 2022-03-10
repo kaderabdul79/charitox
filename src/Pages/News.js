@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import Title from '../elements/Title';
 import OneNews from './OneNews';
+import { useHistory } from 'react-router-dom';
 
 const News = () => {
     const [news,setNews] = useState([])
@@ -13,6 +14,12 @@ const News = () => {
         // console.log(data.articles)
         .then(data => setNews(data.articles))
     },[])
+    // if user want to read more news then after click the read more button push him to that news details
+    const history = useHistory()
+    const handleNewsClick = (title) => {
+        // console.log(title)
+        history.push(`/news/${title}`);
+    }
     return (
         <div className=''>
             <Nav></Nav>
@@ -20,12 +27,12 @@ const News = () => {
             <div className="news-area">
                     {
                         news.map(articles => (
-                            <div className='articles'>
+                            <div key={articles.title} className='articles'>
                             <img src={articles.urlToImage} alt="" />
                             <div className="article-content">
                                 <h3>{articles.title}</h3>
                                 <article>{articles.description}</article>
-                                <button className="btn">read more</button>
+                                <button onClick={() => handleNewsClick(articles.title)} className="newsbtn" >read more</button>
                             </div>
                             </div>
                         ))

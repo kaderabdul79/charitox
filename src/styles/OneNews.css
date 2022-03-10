@@ -1,0 +1,14 @@
+.news-grid{
+    margin: 10px 100px;
+}
+.news img{
+    min-width: 1200px;
+}
+.newsauthor-date span{
+    background-color: #efc963;
+    padding: 10px 18px;
+    border-radius: 6px;
+    margin: 10px 0;
+    display: inline-block;
+    margin-right: 20px;
+}
