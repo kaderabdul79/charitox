@@ -1,11 +1,25 @@
 .news-area{
-
+    margin: 10px 100px;
 }
 .news-grid{
-    display: grid;
-    grid-template-columns: 5,1fr;
-    grid-template-rows: 2,1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .news{
-
+    width: 40%;
+    margin-bottom: 30px;
+}
+.news img{
+    width: 100%;
+}
+.article span{
+    background-color: #ceab4b;
+    padding: 12px 12px;
+    text-align: center;
+    display: inline-block;
+    text-transform: capitalize;
+}
+.article span:hover{
+    background-color: #efc963;
 }
