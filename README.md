@@ -1,7 +1,7 @@
 # Charitox
 This Project Basically Fundrising Website.Anyone Can Donate so, organizer can help them who have no food and so on.
 
-![charitox-project showcase](charitoxcharitox.jpg)
+![charitox-project showcase](charitox.jpg)
 
 ## Features
 <ol style="list-style-type:number">
