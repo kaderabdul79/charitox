@@ -8,6 +8,7 @@ import Event from './Pages/Event';
 import Homepage from './Pages/Homepage';
 import Login from './Pages/Login';
 import News from './Pages/News';
+import OneNews from './Pages/OneNews';
 import Signup from './Pages/Signup';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/events"><AllEvents></AllEvents></Route>
           <PrivateRoute path="/event"><Event></Event></PrivateRoute>
           <Route path="/news"><News></News></Route>
+          <Route path="/news/:newsid"><OneNews></OneNews></Route>
           <Route path="/about"><About></About></Route>
           <Route path="/login"><Login></Login></Route>
           <Route path="/signup"><Signup></Signup></Route>
