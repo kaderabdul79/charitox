@@ -19,7 +19,7 @@ const DonateForm = () => {
         const donateData = {...donateInfo}
         // console.log(donateData)
         // 
-        fetch('http://localhost:5000/donates', {
+        fetch('https://protected-mesa-61574.herokuapp.com/donates', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

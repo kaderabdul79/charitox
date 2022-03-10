@@ -8,7 +8,7 @@ const ShowDonatesData = () => {
     const [donates,setDonates] = useState([])
     // get all data who donated to us using api named donates
     useEffect(()=>{
-        fetch('http://localhost:5000/donates', {
+        fetch('https://protected-mesa-61574.herokuapp.com/donates', {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'
