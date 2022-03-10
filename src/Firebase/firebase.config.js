@@ -1,9 +1,11 @@
+// console.log(process.env);
 const firebaseConfig = {
-    apiKey: "AIzaSyAEgqLySm1or_e0aL-j_DD3lGcWT3x3JXk",
-    authDomain: "charitox-fa919.firebaseapp.com",
-    projectId: "charitox-fa919",
-    storageBucket: "charitox-fa919.appspot.com",
-    messagingSenderId: "993068439752",
-    appId: "1:993068439752:web:0912060e67ddd02d33adfd"
-  };
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+};
+
 export default firebaseConfig;  
