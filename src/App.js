@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './context/AuthProvider';
+import About from './Pages/About';
 import AllEvents from './Pages/AllEvents';
 import Donate from './Pages/Donate';
 import Event from './Pages/Event';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/events"><AllEvents></AllEvents></Route>
           <PrivateRoute path="/event"><Event></Event></PrivateRoute>
           <Route path="/news"><News></News></Route>
+          <Route path="/about"><About></About></Route>
           <Route path="/login"><Login></Login></Route>
           <Route path="/signup"><Signup></Signup></Route>
           <Route path="/donate"><Donate></Donate></Route>
