@@ -45,7 +45,7 @@ const Event = () => {
             <div className="booking">
                 <div className="booking-form">
                     <div className="login">Book for Event</div>
-                    <form class="form" onSubmit={handleEventForm}>
+                    <form className="form" onSubmit={handleEventForm}>
                         <div className='email'><input type="email" name="email" disabled value={user.email} placeholder='enter email'></input></div>
                         <div className='name'><input type="text" onBlur={handleOnBlur} value={user.displayName} name="name" placeholder='Enter name'></input></div>
                         <div className="submit"><input type="submit" value="Book Seat" /></div>
