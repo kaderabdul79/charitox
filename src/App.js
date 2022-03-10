@@ -5,7 +5,6 @@ import About from './Pages/About';
 import AllEvents from './Pages/AllEvents';
 import Donate from './Pages/Donate';
 import Event from './Pages/Event';
-import FetchAllNews from './Pages/FetchAllNews';
 import Homepage from './Pages/Homepage';
 import Login from './Pages/Login';
 import News from './Pages/News';

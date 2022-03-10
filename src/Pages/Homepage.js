@@ -11,7 +11,7 @@ const Homepage = () => {
             <Header></Header>
             <FeaturesCause></FeaturesCause>
             <Events></Events>
-            <NewsFeeds></NewsFeeds>
+            {/* <NewsFeeds></NewsFeeds> */}
             <Footer></Footer>
         </div>
     );

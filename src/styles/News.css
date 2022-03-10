@@ -8,7 +8,7 @@
     
 }
 .articles img{
-    max-width: 600px;
+    min-width: 600px;
     margin-right: 20px;
 }
 .article-content h3{

@@ -16,7 +16,6 @@ const Nav = () => {
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/events">events</Link></li>
                     <li><Link to="/news">News</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
                     {
                         user.email ? <li><Link onClick={logOut}>Logout</Link></li>
                         : <li><Link to="/login">Login</Link></li>

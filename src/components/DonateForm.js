@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import useAuth from '../hooks/useAuth';
 import '../styles/DonateForm.css';
 
 const DonateForm = () => {
     const [donateInfo,setdonateInfo] = useState({})
-    // const {usingGoogleSignin, usingGithubSignin, user, error,userdonate} = useAuth()
+    const [success,setSuccess] = useState("")
 
     const handleOnChange = e => {
         const field = e.target.name;
@@ -18,9 +16,24 @@ const DonateForm = () => {
 
 
     const handleSigninForm = (e) => {
-        // console.log(donateInfo);
-        // userdonate(donateInfo.email,donateInfo.password,location,history)
-        
+        const donateData = {...donateInfo}
+        // console.log(donateData)
+        // 
+        fetch('http://localhost:5000/donates', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(donateData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    setSuccess('Successfully Donated to Us,Thanks!.')
+                    setdonateInfo("")
+                }
+            })
+        // 
         e.preventDefault();
     }
     return (
@@ -29,14 +42,14 @@ const DonateForm = () => {
                 <div className="donateform">
                 <form className="form" onSubmit={handleSigninForm}>
                     <div className='email'><input onChange={handleOnChange} type="email" name="email" placeholder='enter email'></input></div>
-                    <div className='password'><input onChange={handleOnChange} type="password" name="password" placeholder='enter password'></input></div>
+                    <div className='text'><input onChange={handleOnChange} type="text" name="name" placeholder='enter name'></input></div>
+                    <div className='text'><input onChange={handleOnChange} type="text" name="city" placeholder='enter city'></input></div>
+                    <div className='amount'><input onChange={handleOnChange} type="text" name="amount" placeholder='enter donating amount'></input></div>
+                    <div className='phn'><input onChange={handleOnChange} type="text" name="phone" placeholder='enter phone'></input></div>
                     <div className="submit"><input onClick={handleSigninForm} type="submit" value="Donate" name="donate" /></div>
                 </form>
+                {success ? <h4>{success}</h4> : ""}
                 </div>
-                {/* <div className="provider">
-                    <button className='google' onClick={GoogleSignin} >Connect with Google</button>
-                    <button className='github' onClick={GithubSignin}>Connect with Github</button>
-                </div> */}
             </div>
         </div>
     );
