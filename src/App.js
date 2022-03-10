@@ -12,6 +12,7 @@ import OneNews from './Pages/OneNews';
 import ShowDonatesData from './Pages/ShowDonatesData';
 import Signup from './Pages/Signup';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import NotFound from './Pages/NotFound';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/signup"><Signup></Signup></Route>
           <Route path="/donate"><Donate></Donate></Route>
           <Route path="/donates"><ShowDonatesData></ShowDonatesData></Route>
+          <Route path="*"><NotFound></NotFound></Route>
         </Switch>
       </BrowserRouter>
     </AuthProvider>    

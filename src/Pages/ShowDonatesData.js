@@ -33,21 +33,20 @@ const ShowDonatesData = () => {
                     <th>Donated Amount</th>
                     <th>Phone</th>
                 </tr>
-                <tr>
-                    {
+                {
                         donates.map(donate => (
-                            // console.log(donate)
-                            <>
-                            <td>{donate.email}</td>
-                            <td>{donate.name}</td>
-                            <td>{donate.city}</td>
-                            <td>${donate.amount}</td>
-                            <td>{donate.phone}</td>
-                            </>
-                        ))
-                    }
-
+                        // console.log(donate)
+                <tr>       
+                    <td>{donate.email}</td>
+                    <>
+                    <td>{donate.name}</td>
+                    <td>{donate.city}</td>
+                    <td>${donate.amount}</td>
+                    <td>{donate.phone}</td>
+                    </>
                 </tr>
+                    ))
+                }
                 </table>
             </div>
             <Footer></Footer>
